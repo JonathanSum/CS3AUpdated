@@ -1604,7 +1604,7 @@ void MainWindow::paintEvent(QPaintEvent *) {
                 QPointF points[4] = {QPointF(x + l + 70 - 10, y + (h * 2)), QPointF(x + l + 10 + 70 - 10, y + (h / 2)),
                                      QPointF((x + l + 70 - 10), y - h), QPointF(x + l + 70 - 10, y + h)};
                 painter.drawConvexPolygon(points, 4);
-//                cout <<tempR.stringNumeric()<<endl;
+
                 QString qstr = QString::fromStdString(tempR.stringNumeric());
 
 
