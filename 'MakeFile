@@ -1,0 +1,10 @@
+all : hello
+hello: main.o complex.o
+        g++ main.o complex.o -o hello.exe
+
+main.o: main.cpp
+        g++ -c main.cpp
+
+complex.o complex.cpp
+          g++ -c complex.cpp
+clean: rm -rf *o hello

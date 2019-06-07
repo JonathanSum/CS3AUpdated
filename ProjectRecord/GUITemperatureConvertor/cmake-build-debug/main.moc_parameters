@@ -1,0 +1,6 @@
+-IC:/Users/JonathanSum/ZeroTwo
+-IC:/Users/JonathanSum/ZeroTwo/cmake-build-debug
+-DWIN32
+-o
+C:/Users/JonathanSum/ZeroTwo/cmake-build-debug/main.moc
+C:/Users/JonathanSum/ZeroTwo/main.cpp

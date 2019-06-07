@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.14)
+project(ZeroTwo)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+set(CMAKE_CXX_STANDARD 17)
+#set(SOURCE_FILES main.cpp )
+set(SOURCE_FILES main.cpp mainwindow.cpp mainwindow.h Rational.h Rational.cpp Date.h Date.cpp complex.h complex.cpp intVector.h intVector.cpp)
+find_package(Qt5Widgets REQUIRED)
+find_package( Qt5Core REQUIRED)
+find_package( Qt5Gui REQUIRED)
+set(UI_FILES)
+
+set(RC_FILES)
+
+set(QRC_FILES)
+
+add_executable(ZeroTwo ${SOURCE_FILES})
+
+target_link_libraries(ZeroTwo Qt5::Widgets Qt5::Core Qt5::Gui)
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+John Smith
+20
+Math
+3.5
+
+Anna White
+19
+English
+3.2
+
+Mary Same
+20
+CS
+2.5
+
+Tommy Switch
+50
+Art
+3.0
+
+Paul Johnson
+18
+Physics
+3.7
+

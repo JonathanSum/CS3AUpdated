@@ -1,0 +1,1 @@
+-IC:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/BrokenMusicBox_autogen/include -isystem C:/Qt/5.12.3/mingw73_32/include -isystem C:/Qt/5.12.3/mingw73_32/include/QtCore -isystem C:/Qt/5.12.3/mingw73_32/./mkspecs/win32-g++ -isystem C:/Qt/5.12.3/mingw73_32/include/QtWidgets -isystem C:/Qt/5.12.3/mingw73_32/include/QtGui -isystem C:/Qt/5.12.3/mingw73_32/include/QtANGLE 

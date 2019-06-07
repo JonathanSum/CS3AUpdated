@@ -1,0 +1,4 @@
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/CMakeFiles/BrokenMusicBox_autogen.dir

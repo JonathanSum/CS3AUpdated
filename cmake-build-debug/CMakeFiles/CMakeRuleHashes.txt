@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+04cde7f112df103f6a751a7cb7b4cd08 CMakeFiles/BrokenMusicBox_autogen
