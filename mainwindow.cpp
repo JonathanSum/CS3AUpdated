@@ -15,6 +15,17 @@
 
 using namespace std;
 
+/*****************************************************
+ *
+ *   Constructor MainWindow(QWidget *parent) ): Class MainWindow
+ ________________________________________________
+ *   This Constructor creates the baisc empty UI
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   UI is still exist
+ *   POST-CONDITIONS
+ *   Empty UI created
+*****************************************************/
 MainWindow::MainWindow(QWidget *parent) :
 
 //PROCESSING - Setting up the GUI
@@ -119,25 +130,47 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 }
-
+/*****************************************************
+ *
+ *   Destructor ~IntList(): Class MainWindow
+ ________________________________________________
+ *   This Destructor free all element in UI
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   UI is still exist
+ *   POST-CONDITIONS
+ *   UI's elements are delete in the memory
+*****************************************************/
 MainWindow::~MainWindow() {
     delete ui;
 
 }
 
-
+/*****************************************************
+ *
+ *   dropToListWidget: Class MainWindow
+ ________________________________________________
+ *   This method drops all the child lists into the mother list
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   None
+ *   POST-CONDITIONS
+ *   droped all the child lists into the mother list
+*****************************************************/
 void MainWindow::dropToListWidget() {
-    listId = 1;
-    ui->treeWidget->clear();
-    intListIndex = 1;
-    doubleListIndex = 1;
-    stringListIndex = 1;
-    rationalListIndex = 1;
-    dateListIndex = 1;
-    complextListIndex = 1;
+
+    listId = 1;             //IN -it is the type of the list
+    ui->treeWidget->clear();        //PROCESSING - clean the tree list
+    intListIndex = 1;           //It is the number of the int
+    doubleListIndex = 1;           //It is the number of the double
+    stringListIndex = 1;         //It is the number of the string
+    rationalListIndex = 1;        //It is the number of the rational
+    dateListIndex = 1;        //It is the number of the date
+    complextListIndex = 1;        //It is the number of the complex
+
     for (const auto &v : list_of_LinkedList) {
 
-
+        //PROCESSING - base case to prevent the vector size is more than the index
         if (listId == typeList.size()) {
             typeList.push_back(0);
         }
@@ -145,22 +178,30 @@ void MainWindow::dropToListWidget() {
         //PROCESSING - if the linked list is int
         //             then push_back the int list to the mother list
         if (holds_alternative<LinkedList<int> >(v)) {
+
+            //IN - assigning the title of the list
             QString qstr = QString::fromStdString("Int List " + to_string(intListIndex));
 
+
+
             auto &ListInt = get<LinkedList<int>>(v);
+
+            //OUT - the name of the pointer in qstring
             QString ptrStr = QString("Pointers and current address: 0x%1").arg((quintptr) &ListInt,
                                                                                QT_POINTER_SIZE * 1, 16, QChar('0'));
             QTreeWidgetItem *root = new QTreeWidgetItem(ui->treeWidget,
                                                         QStringList() << qstr << "Int List" << ptrStr);
-            int leafIndex = 1;
+            int leafIndex = 1;   //OUT - setting a leaf index
 
 
             QVariant int_v(listId);
+
+            //IN - assigning the index of the list into the tree list and get index later
             root->setData(0, 5, int_v);
             typeList.at(listId - 1) = 1;
             listId++;
 
-
+            //PROCESSING Assigning the node of the list
             for (auto iterator = ListInt.begin(); iterator != ListInt.end(); iterator++) {
 
                 QString lQstr = QString::fromStdString("Node " + to_string(leafIndex));
@@ -193,7 +234,7 @@ void MainWindow::dropToListWidget() {
             typeList.at(listId - 1) = 2;
             listId++;
 
-
+            //PROCESSING Assigning the node of the list
             for (auto iterator = ListD.begin(); iterator != ListD.end(); iterator++) {
                 QString lQstr = QString::fromStdString("Node " + to_string(leafIndex));
                 QTreeWidgetItem *leaf = new QTreeWidgetItem(root, QStringList() << lQstr << QString::number(*iterator)
@@ -206,7 +247,8 @@ void MainWindow::dropToListWidget() {
 
             }
             doubleListIndex++;
-            //PROCESSING - if the linked list is string
+
+            //PROCESSING - if the linked list is string, assign them
         } else if (holds_alternative<LinkedList<string> >(v)) {
             QString qstr = QString::fromStdString("String List " + to_string(stringListIndex));
 
@@ -223,6 +265,7 @@ void MainWindow::dropToListWidget() {
             listId++;
 
 
+            //PROCESSING Assigning the node of the list
             for (auto iterator = Lists.begin(); iterator != Lists.end(); iterator++) {
                 auto ptr1 = iterator.stringAddress();
                 string s = *iterator;
@@ -235,7 +278,9 @@ void MainWindow::dropToListWidget() {
                 leafIndex++;
             }
             stringListIndex++;
-            //PROCESSING - if the linked list is Rational
+
+
+            //PROCESSING - if the linked list is Rational, assign them
         } else if (holds_alternative<LinkedList<Rational> >(v)) {
             QString qstr = QString::fromStdString("Rational List " + to_string(rationalListIndex));
 
@@ -251,6 +296,7 @@ void MainWindow::dropToListWidget() {
             typeList.at(listId - 1) = 4;
             listId++;
 
+            //PROCESSING Assigning the node of the list
             for (auto iterator = ListR.begin(); iterator != ListR.end(); iterator++) {
                 auto ptr1 = iterator.stringAddress();
 
@@ -265,6 +311,8 @@ void MainWindow::dropToListWidget() {
                 leafIndex++;
             }
             rationalListIndex++;
+
+            //PROCESSING - if the linked list is Date, assign them
         } else if (holds_alternative<LinkedList<Date> >(v)) {
             QString qstr = QString::fromStdString("Date List " + to_string(dateListIndex));
 
@@ -280,6 +328,7 @@ void MainWindow::dropToListWidget() {
             typeList.at(listId - 1) = 5;
             listId++;
 
+            //PROCESSING Assigning the node of the list
             for (auto iterator = ListD.begin(); iterator != ListD.end(); iterator++) {
                 auto ptr1 = iterator.stringAddress();
 
@@ -294,6 +343,8 @@ void MainWindow::dropToListWidget() {
                 leafIndex++;
             }
             dateListIndex++;
+
+            //PROCESSING - if the linked list is Complex, assign them
         } else if (holds_alternative<LinkedList<Complex> >(v)) {
 
             QString qstr = QString::fromStdString("Complex List " + to_string(complextListIndex));
@@ -309,7 +360,7 @@ void MainWindow::dropToListWidget() {
             typeList.at(listId - 1) = 6;
             listId++;
 
-
+            //PROCESSING Assigning the node of the list
             for (auto iterator = ListC.begin(); iterator != ListC.end(); iterator++) {
                 auto ptr1 = iterator.stringAddress();
 
@@ -329,14 +380,41 @@ void MainWindow::dropToListWidget() {
     }
 }
 
-//display button
+
+/*****************************************************
+ *
+ *   on_pushButton_clicked: Class MainWindow
+ ________________________________________________
+ *   This methos if or the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_clicked() {
+
+    //IN - display button
+
     displayClicked = true;
     dropToListWidget();
     listClicked = false;
 }
-
+/*****************************************************
+ *
+ *   on_pushButton_clicked: Class MainWindow
+ ________________________________________________
+ *   This methos if or the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_6_clicked() {
+
+
+    //IN - the create list radio selection
     listClicked = false;
     if (ui->radioButton->isChecked()) {
         LinkedList<int> l2;
@@ -360,12 +438,26 @@ void MainWindow::on_pushButton_6_clicked() {
     dropToListWidget();
 }
 
-//push_back button
+/*****************************************************
+ *
+ *   on_pushButton_clicked: Class MainWindow
+ ________________________________________________
+ *   This methos if or the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_2_clicked() {
 
+
+
+    //IN - push_back button
     if (!listClicked) {
         noListClickedMessage();
         return;
+
     } else if (listClicked) {
         if (displayClicked && listClicked) {
             QVariant message = ui->treeWidget->currentItem()->data(0, 5);
@@ -437,17 +529,34 @@ void MainWindow::on_pushButton_2_clicked() {
 
 }
 
+
+/*****************************************************
+ *
+ *   on_treeWidget_itemClicked(QTreeWidgetItem *item, int column) : Class MainWindow
+ ________________________________________________
+ *   This methos manages if the list is clicked
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   list was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item, int column) {
+
+
+
+    //PROCESSING - if the tree list is cliecked, clear the lineEdit6
     ui->lineEdit_6->clear();
-    int bigLength = sizeOfList();
 
+    int bigLength = sizeOfList();       //IN - assigning the total list length.
 
+    //PROCESSING this hides the node in the list
     if (ui->checkBox->isChecked()) {
         ui->treeWidget->currentItem()->setHidden(true);
     }
 
 
-
+    //PROCESSING - they are all the input box in the GUI
     listClicked = true;
     if (bigLength == 0) {
 
@@ -520,8 +629,7 @@ void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item, int column) {
                 ui->dateEdit->setReadOnly(true);
                 ui->lineEdit_4->setValidator(new QIntValidator(-200, 200,
                                                                ui->lineEdit));
-//                ui->lineEdit_5->setValidator(new QIntValidator(-200, 200,
-//                                                               ui->lineEdit));
+
                 ui->lineEdit_5->setValidator(
                         new QRegularExpressionValidator(QRegularExpression("[1-9]\\d{0,5}"), this));
                 break;
@@ -556,20 +664,58 @@ void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item, int column) {
     }
 }
 
-void MainWindow::noListClickedMessage() {
+/*****************************************************
+ *
+ *   noListClickedMessage()const
+ ________________________________________________
+ *   This methos tells the user that the usser did not click the list
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   none
+ *   POST-CONDITIONS
+ *   told the user that the usser did not click the list
+*****************************************************/
+void MainWindow::noListClickedMessage()const {
+
+    //OUT - if the list did not clicked, tell the user about it.
     QMessageBox msgBox;
     msgBox.setText(
             "Error: Please Select a List Before Clicking a Push Back.\n Click the Display key and Select a list");
     msgBox.exec();
 }
 
-void MainWindow::emptyStringMessage() {
+/*****************************************************
+ *
+ *   emptyStringMessage()const
+ ________________________________________________
+ *   This methos tells the user that the usser did not input to the linedit
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   none
+ *   POST-CONDITIONS
+ *   told the user that the usser did not input to the linedit
+*****************************************************/
+void MainWindow::emptyStringMessage()const {
+
+    //OUT - tell the users it can not push back an empty element
     QMessageBox msgBox;
     msgBox.setText("Error: Can not Push Back a Empty Element.");
     msgBox.exec();
 }
 
-
+/*****************************************************
+ *
+ *   push_back_by_type(int the_integer1, int the_integer2, int the_integer3,
+                       double the_double1, double the_double2, const string &the_string,
+                       int the_type_index, int selectedIndex, int selectedNode, unsigned operation)
+ ________________________________________________
+ *   This methos edits the mother list and child list based on the operation number 1-9
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   none
+ *   POST-CONDITIONS
+ *   edited the mother list and child list based on the operation number 1-9
+*****************************************************/
 void MainWindow::push_back_by_type(int the_integer1, int the_integer2, int the_integer3,
                                    double the_double1, double the_double2, const string &the_string,
                                    int the_type_index, int selectedIndex, int selectedNode, unsigned operation) {
@@ -577,6 +723,7 @@ void MainWindow::push_back_by_type(int the_integer1, int the_integer2, int the_i
     selectedIndex = selectedIndex - 1;
     int atIndex = 0;
 
+    // IN - loop through the mother list and do with them based on the opereation 1 - 9
     for (auto &v : list_of_LinkedList) {
         if (atIndex == selectedIndex) {
             switch (the_type_index) {
@@ -876,8 +1023,20 @@ void MainWindow::push_back_by_type(int the_integer1, int the_integer2, int the_i
 }
 
 
-//push front button
+/*****************************************************
+ *
+ *   on_pushButton_3_clicked() Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_3_clicked() {
+
+    //IN - push front button and edditing
     if (!listClicked) {
         noListClickedMessage();
     } else {
@@ -951,8 +1110,20 @@ void MainWindow::on_pushButton_3_clicked() {
 
 }
 
-//Pop_Front Button
+/*****************************************************
+ *
+ *   on_pushButton_4_clicked(): Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_4_clicked() {
+
+    //IN - Pop_Front Button and pop list
     if (!listClicked) {
         noListClickedMessage();
     }
@@ -1002,8 +1173,20 @@ void MainWindow::on_pushButton_4_clicked() {
     }
 }
 
-//selected sort button
+/*****************************************************
+ *
+ *   on_pushButton_8_clicked(): Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_8_clicked() {
+
+    //IN - selected sort button and selected sort them based on its type
     if (!listClicked) {
         noListClickedMessage();
     }
@@ -1053,8 +1236,20 @@ void MainWindow::on_pushButton_8_clicked() {
     }
 }
 
-//Copy Button
+/*****************************************************
+ *
+ *   on_pushButton_7_clicked(): Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_7_clicked() {
+
+    //IN - Copy Button and send the opereation number 5
     if (!listClicked) {
         noListClickedMessage();
     }
@@ -1104,8 +1299,20 @@ void MainWindow::on_pushButton_7_clicked() {
     }
 }
 
-//remove duplicates button
+/*****************************************************
+ *
+ *   on_pushButton_10_clicked() : Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_10_clicked() {
+
+    //IN - remove duplicates button and send the opereation number 7
     if (!listClicked) {
         noListClickedMessage();
     }
@@ -1155,8 +1362,20 @@ void MainWindow::on_pushButton_10_clicked() {
     }
 }
 
-//Insert_Sorted Button
+/*****************************************************
+ *
+ *   on_pushButton_clicked: Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_5_clicked() {
+
+    //IN - Insert_Sorted Button button and send the opereation number 4
     if (!listClicked) {
         noListClickedMessage();
     } else {
@@ -1230,8 +1449,21 @@ void MainWindow::on_pushButton_5_clicked() {
 
 }
 
-//Delete Button
+/*****************************************************
+ *
+ *   on_pushButton_9_clicked: Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_9_clicked() {
+
+
+    //IN - Delete Button Button button and send the opereation number 8
     if (list_of_LinkedList.isEmpty()) {
         QMessageBox msgBox;
         msgBox.setText(
@@ -1291,8 +1523,21 @@ void MainWindow::on_pushButton_9_clicked() {
     }
 }
 
-//Insert Node Button
+/*****************************************************
+ *
+ *   on_pushButton_clicked: Class MainWindow
+ ________________________________________________
+ *   This methos manages the push back button
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   Button was clicked
+ *   POST-CONDITIONS
+ *   apply the program in the function in below
+*****************************************************/
 void MainWindow::on_pushButton_11_clicked() {
+
+
+    //IN - Insert Node Button and operation is 9 to send them to the function handle that
     if (!listClicked) {
         noListClickedMessage();
     } else if (displayClicked && listClicked) {
@@ -1364,13 +1609,24 @@ void MainWindow::on_pushButton_11_clicked() {
         }
     }
 }
-
+/*****************************************************
+ *
+ *   sizeOfList() const: Class MainWindow
+ ________________________________________________
+ *   This method return the size of the child list
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   none
+ *   POST-CONDITIONS
+ *   returned the size of the child list
+*****************************************************/
 int MainWindow::sizeOfList() const {
     int index = (ui->treeWidget->currentItem()->data(0, 5).toInt()) - 1;
 
 
     int currentIndex = 0;
 
+    //PROCESSING - loop through the list and return their size
     if (index >= 0 && displayClicked) {
 
         int type_index = typeList.at(index);
@@ -1421,23 +1677,34 @@ int MainWindow::sizeOfList() const {
     return 0;
 }
 
-void MainWindow::on_pushButton_12_clicked() {
 
-}
-
+/*****************************************************
+ *
+ *   paintEvent(QPaintEvent *): Class MainWindow
+ ________________________________________________
+ *   This method paints the list on the GUI
+ ________________________________________________
+ *   PRE-CONDITIONS
+ *   None
+ *   POST-CONDITIONS
+ *   painted the list on the GUI
+*****************************************************/
 void MainWindow::paintEvent(QPaintEvent *) {
-    int x = 30;
-    int y = 570;
-    int l = 40,
-            h = 15;
+
+
+
+
+    int x = 30;         //PROCESSING - starting location 30 in x-axis
+    int y = 570;         //PROCESSING - starting location 30 in y-axis
+    int l = 40,         //PROCESSING - length of the rectangle
+            h = 15;         //PROCESSING - height of the rectangle
     int paddingTop =50;
 
     for (const auto &v : list_of_LinkedList) {
 
 
 
-        //PROCESSING - if the linked list is int
-        //             then push_back the int list to the mother list
+        //PROCESSING - if the linked list is int,, paint the arrow for it
         if (holds_alternative<LinkedList<int> >(v)) {
 
             auto &ListInt = get<LinkedList<int>>(v);
@@ -1462,9 +1729,6 @@ void MainWindow::paintEvent(QPaintEvent *) {
                 string sNum = to_string(*iterator);
                 QString qstr = QString::fromStdString(sNum);
 
-                //std::string str = displayList->at(displayList->size()-2);
-                //QString qstr2 = QString::fromStdString(str);
-//        ui->label_11->setText("changed");
 
                 painter.setFont(QFont("Arial", 8));
                 painter.drawText(x - 10, y + 15, qstr);
@@ -1474,7 +1738,7 @@ void MainWindow::paintEvent(QPaintEvent *) {
             }
             y += paddingTop;
 
-            //PROCESSING - if the linked list is double
+            //PROCESSING - if the linked list is double, paint the arrow for it
         } else if (holds_alternative<LinkedList<double> >(v)) {
 
             auto &ListD = get<LinkedList<double>>(v);
@@ -1499,9 +1763,7 @@ void MainWindow::paintEvent(QPaintEvent *) {
                 string sNum = to_string(*iterator);
                 QString qstr = QString::fromStdString(sNum);
 
-                //std::string str = displayList->at(displayList->size()-2);
-                //QString qstr2 = QString::fromStdString(str);
-//        ui->label_11->setText("changed");
+
 
                 painter.setFont(QFont("Arial", 8));
                 painter.drawText(x - 10, y + 15, qstr);
@@ -1513,7 +1775,7 @@ void MainWindow::paintEvent(QPaintEvent *) {
 
             }
             y += paddingTop;
-            //PROCESSING - if the linked list is string
+            //PROCESSING - if the linked list is string, paint the arrow for it
         } else if (holds_alternative<LinkedList<string> >(v)) {
 
             auto &Lists = get<LinkedList<string>>(v);
@@ -1535,9 +1797,7 @@ void MainWindow::paintEvent(QPaintEvent *) {
                 painter.drawConvexPolygon(points, 4);
                 QString qstr = QString::fromStdString(*iterator);
 
-                //std::string str = displayList->at(displayList->size()-2);
-                //QString qstr2 = QString::fromStdString(str);
-//        ui->label_11->setText("changed");
+
 
                 painter.setFont(QFont("Arial", 8));
                 painter.drawText(x - 10, y + 15, qstr);
@@ -1546,7 +1806,8 @@ void MainWindow::paintEvent(QPaintEvent *) {
 
             }
             y += paddingTop;
-            //PROCESSING - if the linked list is Rational
+
+            //PROCESSING - if the linked list is Rational, paint the arrow for it
         } else if (holds_alternative<LinkedList<Rational> >(v)) {
 
             const auto &ListR = get<LinkedList<Rational>>(v);
@@ -1580,6 +1841,7 @@ void MainWindow::paintEvent(QPaintEvent *) {
             }
             y += paddingTop;
 
+            //PROCESSING - if the linked list is Date, paint the arrow for it
         } else if (holds_alternative<LinkedList<Date> >(v)) {
 
             const auto &ListD = get<LinkedList<Date>>(v);
@@ -1617,6 +1879,8 @@ void MainWindow::paintEvent(QPaintEvent *) {
 
             }
             y += paddingTop;
+
+            //PROCESSING - if the linked list is Complex, paint the arrow for it
         } else if (holds_alternative<LinkedList<Complex> >(v)) {
             x = 30;
             const auto &ListC = get<LinkedList<Complex>>(v);

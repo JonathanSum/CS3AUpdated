@@ -12,7 +12,7 @@
 #include "IntList.h"
 #include <iostream>
 
-class i1;
+
 
 using namespace std;
 

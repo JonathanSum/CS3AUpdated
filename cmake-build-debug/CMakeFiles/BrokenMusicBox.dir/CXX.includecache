@@ -1698,6 +1698,18 @@ C:/Users/BrokenMusicBox/BrokenMusicBox/Rational.h
 iostream
 -
 
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/BrokenMusicBox_autogen/EWIEGA46WW/moc_mainwindow.cpp
+../../../mainwindow.h
+C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/BrokenMusicBox_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/BrokenMusicBox_autogen/EWIEGA46WW/moc_mainwindow.cpp
+
 C:/Users/BrokenMusicBox/BrokenMusicBox/complex.h
 iostream
 -
@@ -1727,6 +1739,14 @@ variant
 C:/Users/BrokenMusicBox/BrokenMusicBox/listEmpty.h
 iostream
 -
+
+C:/Users/BrokenMusicBox/BrokenMusicBox/main.cpp
+mainwindow.h
+C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h
+QApplication
+-
+ui_mainwindow.h
+C:/Users/BrokenMusicBox/BrokenMusicBox/ui_mainwindow.h
 
 C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.cpp
 mainwindow.h

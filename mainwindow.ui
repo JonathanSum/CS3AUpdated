@@ -484,19 +484,6 @@
      <string>Insert</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_12">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>530</y>
-      <width>121</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Show All</string>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
