@@ -68,7 +68,6 @@ public:
     QLineEdit *lineEdit_6;
     QLabel *label_9;
     QPushButton *pushButton_11;
-    QPushButton *pushButton_12;
     QCheckBox *checkBox;
     QLabel *label_11;
     QMenuBar *menuBar;
@@ -202,9 +201,6 @@ public:
         pushButton_11 = new QPushButton(centralWidget);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         pushButton_11->setGeometry(QRect(620, 400, 75, 24));
-        pushButton_12 = new QPushButton(centralWidget);
-        pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
-        pushButton_12->setGeometry(QRect(870, 530, 121, 24));
         checkBox = new QCheckBox(centralWidget);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
         checkBox->setGeometry(QRect(10, 240, 81, 51));
@@ -257,7 +253,6 @@ public:
         pushButton_9->setText(QApplication::translate("MainWindow", "Delete List", nullptr));
         label_9->setText(QApplication::translate("MainWindow", "Index of the Node to be inserted  (starting index 1 and selected a list first):", nullptr));
         pushButton_11->setText(QApplication::translate("MainWindow", "Insert", nullptr));
-        pushButton_12->setText(QApplication::translate("MainWindow", "Show All", nullptr));
         checkBox->setText(QApplication::translate("MainWindow", "Select Node", nullptr));
         label_11->setText(QApplication::translate("MainWindow", " For Hiding", nullptr));
     } // retranslateUi

@@ -17,9 +17,11 @@
   <component name="ChangeListManager">
     <list default="true" id="41949555-c326-4c79-b561-831f3e8bbc7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BrokenMusicBox.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BrokenMusicBox.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BrokenMusicBox_autogen/include/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BrokenMusicBox_autogen/include/ui_mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BrokenMusicBox.dir/objects.a" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainwindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="713" column="19" lean-forward="true" selection-start-line="713" selection-start-column="19" selection-end-line="713" selection-end-column="19" />
+            <state relative-caret-position="312">
+              <caret line="721" lean-forward="true" selection-start-line="721" selection-end-line="721" />
             </state>
           </provider>
         </entry>
@@ -46,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainwindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3689">
-              <caret line="228" column="32" lean-forward="true" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+            <state relative-caret-position="3876">
+              <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -55,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="91" selection-end-column="29" />
+            <state relative-caret-position="1513">
+              <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="91" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -64,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1067">
+            <state relative-caret-position="2482">
               <caret line="146" selection-start-line="146" selection-end-line="157" selection-end-column="54" />
             </state>
           </provider>
@@ -167,8 +169,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="231" />
-    <option name="y" value="216" />
+    <option name="x" value="427" />
+    <option name="y" value="230" />
     <option name="width" value="1330" />
     <option name="height" value="922" />
   </component>
@@ -178,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,7 +197,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,17 +252,18 @@
       <workItem from="1559892960779" duration="6400000" />
       <workItem from="1559907350066" duration="21000" />
       <workItem from="1559992947124" duration="10847000" />
+      <workItem from="1560058041101" duration="588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24194000" />
+    <option name="totallyTimeSpent" value="24782000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="231" y="216" width="1330" height="922" extended-state="0" />
+    <frame x="427" y="230" width="1330" height="922" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29370078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2984252" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -316,6 +319,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainwindow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="721" lean-forward="true" selection-start-line="721" selection-end-line="721" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainwindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3876">
+          <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="91" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="146" selection-start-line="146" selection-end-line="157" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -341,34 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="91" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectRecord/SortingLinkedList(int)+recursive/IntList.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1067">
-          <caret line="146" selection-start-line="146" selection-end-line="157" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainwindow.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3689">
-          <caret line="228" column="32" lean-forward="true" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainwindow.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="713" column="19" lean-forward="true" selection-start-line="713" selection-start-column="19" selection-end-line="713" selection-end-column="19" />
         </state>
       </provider>
     </entry>
