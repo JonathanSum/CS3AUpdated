@@ -12,7 +12,7 @@
 #include "Date.h"
 #include "complex.h"
 #include "intVector.h"
-#include "stringVector.h"
+
 namespace Ui {
     class MainWindow;
 }
@@ -43,10 +43,17 @@ private slots:
     void on_pushButton_9_clicked();
     void on_pushButton_10_clicked();
     void on_pushButton_11_clicked();
-    void on_treeWidget_itemClicked(QTreeWidgetItem *item, int column);
+    void on_treeWidget_itemClicked(QTreeWidgetItem *item,         //IN - widget item in the tree widget
+                                    int column          //IN - Column from left to right
+                                    );
 
 protected:
-    void paintEvent(QPaintEvent *);
+    /**********************
+         * * MUTATORS **
+    **********************/
+    void paintEvent(
+            QPaintEvent *       //IN - A painting event in GUI
+            );
 
 private:
     //OUT - the UI
@@ -58,13 +65,13 @@ private:
     LinkedList<int>, LinkedList<double>, LinkedList<string>,
     LinkedList<Rational>, LinkedList<Date>, LinkedList<Complex> > > list_of_LinkedList;
 
-    int intListIndex;       //IN -  total number of the int index
-    int doubleListIndex;       //IN -  total number of the double index
-    int stringListIndex;       //IN -  total number of the string index
-    int rationalListIndex;       //IN -  total number of the int index
-    int dateListIndex;       //IN -  total number of the date index
-    int complextListIndex;       //IN -  total number of the complex index
-    int listId;       //IN -  type list in id
+    int intListIndex{};       //IN -  total number of the int index
+    int doubleListIndex{};       //IN -  total number of the double index
+    int stringListIndex{};       //IN -  total number of the string index
+    int rationalListIndex{};       //IN -  total number of the int index
+    int dateListIndex{};       //IN -  total number of the date index
+    int complextListIndex{};       //IN -  total number of the complex index
+    int listId{};       //IN -  type list in id
     IntVector typeList = IntVector(50);     //IN - An int list vector stores list type in int
     bool displayClicked=false;     //IN - boolean shows the display button was clicked or not
     bool listClicked=false;     //IN - boolean shows the list was clicked or not
@@ -117,7 +124,8 @@ private:
 /*********************************************************************
  *  explicit MainWindow(QWidget *parent = nullptr);
  *  Constructor;    Initialize class attributes
- * Parameter: none
+ * Parameter: QTreeWidgetItem *item,         //IN - widget item in the tree widget
+                                    int column          //IN - Column from left to right
  *--------------------------------------------------------------------
  * Return: none
 *********************************************************************/

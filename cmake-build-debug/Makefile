@@ -324,33 +324,6 @@ mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles\BrokenMusicBox.dir\build.make CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
-stringVector.obj: stringVector.cpp.obj
-
-.PHONY : stringVector.obj
-
-# target to build an object file
-stringVector.cpp.obj:
-	$(MAKE) -f CMakeFiles\BrokenMusicBox.dir\build.make CMakeFiles/BrokenMusicBox.dir/stringVector.cpp.obj
-.PHONY : stringVector.cpp.obj
-
-stringVector.i: stringVector.cpp.i
-
-.PHONY : stringVector.i
-
-# target to preprocess a source file
-stringVector.cpp.i:
-	$(MAKE) -f CMakeFiles\BrokenMusicBox.dir\build.make CMakeFiles/BrokenMusicBox.dir/stringVector.cpp.i
-.PHONY : stringVector.cpp.i
-
-stringVector.s: stringVector.cpp.s
-
-.PHONY : stringVector.s
-
-# target to generate assembly for a file
-stringVector.cpp.s:
-	$(MAKE) -f CMakeFiles\BrokenMusicBox.dir\build.make CMakeFiles/BrokenMusicBox.dir/stringVector.cpp.s
-.PHONY : stringVector.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -382,9 +355,6 @@ help:
 	@echo ... mainwindow.obj
 	@echo ... mainwindow.i
 	@echo ... mainwindow.s
-	@echo ... stringVector.obj
-	@echo ... stringVector.i
-	@echo ... stringVector.s
 .PHONY : help
 
 

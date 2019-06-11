@@ -11,8 +11,8 @@ set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
 set(AM_BUILD_DIR "C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/BrokenMusicBox_autogen")
 set(AM_INCLUDE_DIR "C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/BrokenMusicBox_autogen/include")
 # Files
-set(AM_SOURCES "C:/Users/BrokenMusicBox/BrokenMusicBox/Date.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/Rational.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/complex.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/intVector.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/main.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.cpp")
-set(AM_HEADERS "C:/Users/BrokenMusicBox/BrokenMusicBox/Date.h;C:/Users/BrokenMusicBox/BrokenMusicBox/Rational.h;C:/Users/BrokenMusicBox/BrokenMusicBox/complex.h;C:/Users/BrokenMusicBox/BrokenMusicBox/intVector.h;C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h;C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.h")
+set(AM_SOURCES "C:/Users/BrokenMusicBox/BrokenMusicBox/Date.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/Rational.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/complex.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/intVector.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/main.cpp;C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.cpp")
+set(AM_HEADERS "C:/Users/BrokenMusicBox/BrokenMusicBox/Date.h;C:/Users/BrokenMusicBox/BrokenMusicBox/Rational.h;C:/Users/BrokenMusicBox/BrokenMusicBox/complex.h;C:/Users/BrokenMusicBox/BrokenMusicBox/intVector.h;C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h")
 set(AM_SETTINGS_FILE "C:/Users/BrokenMusicBox/BrokenMusicBox/cmake-build-debug/CMakeFiles/BrokenMusicBox_autogen.dir/AutogenOldSettings.txt")
 # Qt
 set(AM_QT_VERSION_MAJOR 5)

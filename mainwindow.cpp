@@ -10,7 +10,6 @@
 #include <QValidator>
 #include "Rational.h"
 #include"qpainter.h"
-#include "stringVector.h"
 #include <QDebug>
 
 using namespace std;

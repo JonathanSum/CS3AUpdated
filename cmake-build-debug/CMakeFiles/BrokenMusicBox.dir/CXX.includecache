@@ -1728,14 +1728,6 @@ C:/Users/BrokenMusicBox/BrokenMusicBox/listEmpty.h
 iostream
 -
 
-C:/Users/BrokenMusicBox/BrokenMusicBox/main.cpp
-mainwindow.h
-C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h
-QApplication
--
-ui_mainwindow.h
-C:/Users/BrokenMusicBox/BrokenMusicBox/ui_mainwindow.h
-
 C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.cpp
 mainwindow.h
 C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h
@@ -1761,8 +1753,6 @@ Rational.h
 C:/Users/BrokenMusicBox/BrokenMusicBox/Rational.h
 qpainter.h
 C:/Users/BrokenMusicBox/BrokenMusicBox/qpainter.h
-stringVector.h
-C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.h
 QDebug
 -
 
@@ -1789,12 +1779,4 @@ complex.h
 C:/Users/BrokenMusicBox/BrokenMusicBox/complex.h
 intVector.h
 C:/Users/BrokenMusicBox/BrokenMusicBox/intVector.h
-stringVector.h
-C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.h
-
-C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.h
-iostream
--
-cstddef
--
 

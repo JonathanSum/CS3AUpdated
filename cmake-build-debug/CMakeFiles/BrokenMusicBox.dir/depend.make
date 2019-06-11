@@ -148,7 +148,6 @@ CMakeFiles/BrokenMusicBox.dir/BrokenMusicBox_autogen/mocs_compilation.cpp.obj: .
 CMakeFiles/BrokenMusicBox.dir/BrokenMusicBox_autogen/mocs_compilation.cpp.obj: ../linkedList.h
 CMakeFiles/BrokenMusicBox.dir/BrokenMusicBox_autogen/mocs_compilation.cpp.obj: ../listEmpty.h
 CMakeFiles/BrokenMusicBox.dir/BrokenMusicBox_autogen/mocs_compilation.cpp.obj: ../mainwindow.h
-CMakeFiles/BrokenMusicBox.dir/BrokenMusicBox_autogen/mocs_compilation.cpp.obj: ../stringVector.h
 
 CMakeFiles/BrokenMusicBox.dir/Date.cpp.obj: C:/Qt/5.12.3/mingw73_32/include/QtCore/qalgorithms.h
 CMakeFiles/BrokenMusicBox.dir/Date.cpp.obj: C:/Qt/5.12.3/mingw73_32/include/QtCore/qarraydata.h
@@ -447,7 +446,6 @@ CMakeFiles/BrokenMusicBox.dir/main.cpp.obj: ../linkedList.h
 CMakeFiles/BrokenMusicBox.dir/main.cpp.obj: ../listEmpty.h
 CMakeFiles/BrokenMusicBox.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/BrokenMusicBox.dir/main.cpp.obj: ../mainwindow.h
-CMakeFiles/BrokenMusicBox.dir/main.cpp.obj: ../stringVector.h
 
 CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: BrokenMusicBox_autogen/include/ui_mainwindow.h
 CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: C:/Qt/5.12.3/mingw73_32/include/QtCore/QDebug
@@ -635,8 +633,4 @@ CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: ../linkedList.h
 CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: ../listEmpty.h
 CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: ../mainwindow.cpp
 CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: ../mainwindow.h
-CMakeFiles/BrokenMusicBox.dir/mainwindow.cpp.obj: ../stringVector.h
-
-CMakeFiles/BrokenMusicBox.dir/stringVector.cpp.obj: ../stringVector.cpp
-CMakeFiles/BrokenMusicBox.dir/stringVector.cpp.obj: ../stringVector.h
 

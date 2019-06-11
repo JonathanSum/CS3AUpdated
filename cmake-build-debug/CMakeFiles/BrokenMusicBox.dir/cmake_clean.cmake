@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/BrokenMusicBox.dir/Date.cpp.obj"
   "CMakeFiles/BrokenMusicBox.dir/complex.cpp.obj"
   "CMakeFiles/BrokenMusicBox.dir/intVector.cpp.obj"
-  "CMakeFiles/BrokenMusicBox.dir/stringVector.cpp.obj"
   "BrokenMusicBox.pdb"
   "BrokenMusicBox.exe"
   "BrokenMusicBox.exe.manifest"

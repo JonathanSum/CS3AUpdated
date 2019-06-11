@@ -146,12 +146,6 @@
 		<Unit filename="C:/Users/BrokenMusicBox/BrokenMusicBox/mainwindow.h">
 			<Option target="BrokenMusicBox"/>
 		</Unit>
-		<Unit filename="C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.cpp">
-			<Option target="BrokenMusicBox"/>
-		</Unit>
-		<Unit filename="C:/Users/BrokenMusicBox/BrokenMusicBox/stringVector.h">
-			<Option target="BrokenMusicBox"/>
-		</Unit>
 		<Unit filename="C:/Users/BrokenMusicBox/BrokenMusicBox/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

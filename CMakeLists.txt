@@ -21,7 +21,7 @@ set(RC_FILES)
 
 set(QRC_FILES)
 
-set(SOURCE_FILES main.cpp mainwindow.cpp mainwindow.h Rational.h Rational.cpp Date.h Date.cpp complex.h complex.cpp intVector.h intVector.cpp stringVector.h stringVector.cpp)
+set(SOURCE_FILES main.cpp mainwindow.cpp mainwindow.h Rational.h Rational.cpp Date.h Date.cpp complex.h complex.cpp intVector.h intVector.cpp )
 
 add_executable(BrokenMusicBox ${SOURCE_FILES})
 
